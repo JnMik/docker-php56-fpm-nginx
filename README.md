@@ -33,6 +33,12 @@ to be used by php services.
     Copyright (c) 1997-2015 The PHP Group
     Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
 
+## To install Newrelic in your app, add this to your Dockerfile
+
+    ENV NR_INSTALL_KEY <your_account_key>
+    ENV NR_APP_NAME <your_application_name>
+    RUN . /prepare-newrelic.sh
+
 ## Contributing
 
 1. Fork it!

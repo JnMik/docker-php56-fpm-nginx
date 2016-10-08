@@ -1,5 +1,5 @@
 #vim:set ft=dockerfile:
-FROM centos:7.1.1503
+FROM centos:7.2.1511
 
 MAINTAINER Crakmedia <docker@crakmedia.com>
 
@@ -8,7 +8,7 @@ RUN yum -y install epel-release yum-utils && \
     rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm && \
     yum-config-manager --enable remi-php56,remi && \
     yum -y update && \
-    yum -y install php-fpm php-mysql php-mcrypt php-curl php-cli php-gd php-pgsql php-pdo \
+    yum -y install wget sendmail php-fpm php-mysql php-mcrypt php-curl php-cli php-gd php-pgsql php-pdo \
            php-common php-json php-pecl-redis php-pecl-memcache nginx python-pip \
            vim telnet git php-mbstring php-pecl-xdebug php-soap php-yaml && \
     yum clean all
